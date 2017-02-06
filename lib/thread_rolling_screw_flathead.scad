@@ -41,7 +41,7 @@ function thread_rolling_clearance_diameter(size) =
     0;
 
 // Practically infinite... OpenSCAD cannot actually use an infinite length.
-long = 1e35;
+long = 1e10;
 
 //          predrill_diameter
 //               <----->

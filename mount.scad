@@ -6,7 +6,7 @@ use <lib/cylinder_outer.scad>
 gang_spacing = (1+13/16)*inch;
 box_screw_distance = (3+3/16)*inch;
 face_screw_distance = (3+13/16)*inch;
-screw_drill_diameter = 0.136*inch; // #6-32
+screw_drill_diameter = 0.110*inch; // for tapping #6-32
 screw_clearance_diameter = 0.1495*inch; // #6 free fit
 thickness = 1.5*mm;
 insteon_window_x = 41.5*mm;
@@ -14,7 +14,8 @@ insteon_window_y = 66*mm;
 radius = 3.5*mm;
 clearance = 0.5*mm;
 
-face_boss_diameter = 6*mm;
+face_boss_diameter = 7*mm;
+face_boss_height = 3*mm;
 
 bracket_screw_size = "#6";
 bracket_screw_x = 32*mm;
@@ -164,7 +165,7 @@ module insteon_inlinelinc_bracket()
 
 module face_screw_boss()
 {
-    translate([0, 0, 0]) cylinder(h=0.25*inch, d=face_boss_diameter);
+    translate([0, 0, 0]) cylinder(h=face_boss_height, d=face_boss_diameter);
 }
 
 module insteon_inlinelinc_form()
@@ -186,7 +187,7 @@ module insteon_inlinelinc_clearance()
 
 module screw_drill()
 {
-    translate([0, 0, -10]) cylinder(d=screw_drill_diameter, h=20);
+    translate([0, 0, -10]) cylinder(d=screw_drill_diameter, h=20, $fs=0.25);
 }
 
 module screw_clearance()
