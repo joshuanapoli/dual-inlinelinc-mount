@@ -1,7 +1,7 @@
 include <MCAD/units.scad>
 use <lib/insteon_inlinelinc.scad>
-use <lib/thread_rolling_screw_flathead.scad>
-use <lib/cylinder_outer.scad>
+use <thread-rolling-screw/thread_rolling_screw_flathead.scad>
+use <thread-rolling-screw/cylinder_outer.scad>
 
 gang_spacing = (1+13/16)*inch;
 box_screw_distance = (3+3/16)*inch;
